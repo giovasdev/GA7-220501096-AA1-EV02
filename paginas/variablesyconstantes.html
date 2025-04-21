@@ -9,32 +9,50 @@
 </head>
 <body>
 <header>
-  <h1><i class="fas fa-pen-nib"></i> Nomenclatura de Variables y Constantes</h1>
+  <h1><i class="fas fa-code"></i> Nomenclatura de Variables y Constantes</h1>
 </header>
 
 <section>
-  <h2><i class="fas fa-info-circle"></i> ¿Por qué es importante?</h2>
-  <p>El uso adecuado de nombres para variables y constantes mejora la legibilidad del código y facilita su mantenimiento por parte de otros desarrolladores o del propio autor en el futuro.</p>
+  <h2><i class="fas fa-pen"></i> Variables</h2>
+  <p>Las variables almacenan datos que pueden cambiar durante la ejecución del programa. Una nomenclatura clara y coherente mejora la legibilidad, mantenimiento y comprensión del código.</p>
+  <ul>
+    <li>✏️ Utilizar <strong>camelCase</strong>: primera palabra en minúscula y siguientes en mayúscula. Ej: <code>nombreUsuario</code>, <code>totalFactura</code>.</li>
+    <li>✏️ Usar nombres significativos que indiquen claramente el contenido o propósito. Ej: <code>cantidadProductos</code>, <code>fechaNacimiento</code>.</li>
+    <li>✏️ Evitar abreviaciones confusas o letras sueltas como <code>x</code>, <code>tmp</code> (excepto en bucles o contextos muy breves).</li>
+    <li>✏️ Prefiere sustantivos, ya que representan cosas o datos: <code>precioUnitario</code>, <code>correoCliente</code>.</li>
+    <li>✏️ Mantén coherencia con el idioma del proyecto (español o inglés, pero no ambos).</li>
+  </ul>
+  <pre>
+<code>// Correcto
+let nombreCompleto = "Ana María";
+let edadUsuario = 25;
+
+// Incorrecto
+let n = "Ana";
+let e = 25;
+</code>
+    </pre>
 </section>
 
 <section>
-  <h2><i class="fas fa-tags"></i> Buenas prácticas</h2>
+  <h2><i class="fas fa-lock"></i> Constantes</h2>
+  <p>Las constantes almacenan valores que no deben cambiar durante la ejecución del programa. Usar una nomenclatura adecuada facilita su identificación inmediata.</p>
   <ul>
-    <li>🔸 Usar nombres descriptivos, como <code>totalVentas</code> o <code>nombreUsuario</code>.</li>
-    <li>🔸 Emplear camelCase para variables en lenguajes como JavaScript, Java o C#.</li>
-    <li>🔸 Para constantes, utilizar mayúsculas y guiones bajos: <code>MAX_INTENTOS</code>.</li>
-    <li>🔸 Evitar abreviaciones excesivas o letras sueltas (ej: <code>x</code>, <code>tmp</code>).</li>
-    <li>🔸 Alinear los nombres con el contexto del dominio del problema.</li>
+    <li>🔒 Usar <strong>mayúsculas separadas por guiones bajos</strong>: <code>TASA_IVA</code>, <code>MAXIMO_INTENTOS</code>.</li>
+    <li>🔒 El nombre debe representar un valor fijo y ser claro en su propósito.</li>
+    <li>🔒 Evitar usar constantes con nombres ambiguos o genéricos.</li>
+    <li>🔒 Declarar constantes al inicio de archivos o funciones cuando sea posible.</li>
   </ul>
-</section>
+  <pre>
+<code>// Correcto
+const PI = 3.1416;
+const TASA_IVA = 0.19;
 
-<section>
-  <h2><i class="fas fa-wrench"></i> Ejemplos</h2>
-  <ul>
-    <li><code>let totalPagar = 0;</code> ✅ Correcto</li>
-    <li><code>let tp = 0;</code> ❌ Incorrecto (poco claro)</li>
-    <li><code>const LIMITE_TIEMPO = 30;</code> ✅ Constante con estilo correcto</li>
-  </ul>
+// Incorrecto
+const iva = 0.19;
+const pi = 3.1416;
+</code>
+    </pre>
 </section>
 
 <a class="back" href="../index.html"><i class="fas fa-arrow-left"></i> Volver al índice</a>

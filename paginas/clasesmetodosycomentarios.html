@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3. Nomenclatura de Clases, Métodos y Comentarios</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <h1><i class="fas fa-puzzle-piece"></i> Nomenclatura de Clases, Métodos y Comentarios</h1>
+</header>
+
+<section>
+  <h2><i class="fas fa-cube"></i> Clases</h2>
+  <p>Las clases representan entidades o conceptos del mundo real en la programación orientada a objetos. Una buena nomenclatura de clases mejora la organización del código y facilita la reutilización.</p>
+  <ul>
+    <li>📦 Utilizar PascalCase (cada palabra inicia con mayúscula): <code>ClientePremium</code>, <code>FacturaElectronica</code>.</li>
+    <li>📦 Evitar abreviaturas innecesarias o nombres genéricos como <code>Data</code> o <code>Thing</code>.</li>
+    <li>📦 Incluir el tipo de entidad si aplica: <code>UsuarioController</code>, <code>ProductoDTO</code>.</li>
+    <li>📦 Ser coherente con el lenguaje y dominio del sistema.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><i class="fas fa-cogs"></i> Métodos</h2>
+  <p>Los métodos definen el comportamiento de las clases. Deben ser claros y precisos, indicando la acción que realizan.</p>
+  <ul>
+    <li>🔧 Utilizar camelCase: la primera palabra en minúscula y las siguientes con mayúscula. Ej: <code>calcularTotal()</code>.</li>
+    <li>🔧 Usar verbos al inicio: <code>validarUsuario()</code>, <code>obtenerSaldo()</code>, <code>registrarPago()</code>.</li>
+    <li>🔧 Mantener nombres concisos pero descriptivos.</li>
+    <li>🔧 Evitar usar nombres como <code>hacerAlgo()</code> o <code>proceso1()</code>.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><i class="fas fa-comment-dots"></i> Comentarios</h2>
+  <p>Los comentarios explican el "por qué" del código, no el "qué". Ayudan a entender bloques complejos, decisiones técnicas o advertencias para otros desarrolladores.</p>
+  <ul>
+    <li>💬 Escribir comentarios antes de funciones, clases o fragmentos complejos.</li>
+    <li>💬 No comentar lo obvio. Por ejemplo: <code>// Suma dos números</code> sobre <code>return a + b;</code> es redundante.</li>
+    <li>💬 Mantener comentarios actualizados conforme se modifica el código.</li>
+    <li>💬 Usar un estilo coherente según el lenguaje: <code>// comentario</code> para una línea o <code>/* comentario largo */</code>.</li>
+  </ul>
+  <pre>
+<code>// Calcula el total a pagar con el IVA incluido
+function calcularTotal(productos) {
+  // Recorre todos los productos y suma sus valores con IVA
+  let total = 0;
+  productos.forEach(p => total += p.precio * 1.19);
+  return total;
+}
+</code>
+    </pre>
+</section>
+
+<a class="back" href="../index.html"><i class="fas fa-arrow-left"></i> Volver al índice</a>
+</body>
+</html>
